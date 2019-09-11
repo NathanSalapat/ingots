@@ -25,7 +25,7 @@ dofile(minetest.get_modpath("ingots").."/api.lua")
 --Here you can make individual choices per ingot on which varian will be used.
 --To disable the ability of an ingot to be placed just comment out it's registration line.
 
-if minetest.get_modpath("default") then
+--[[if minetest.get_modpath("default") then
 		ingots.register_ingots("default:copper_ingot", "ingot_copper.png", conf.is_big)
 		ingots.register_ingots("default:tin_ingot", "ingot_tin.png", conf.is_big)
 		ingots.register_ingots("default:bronze_ingot", "ingot_bronze.png", conf.is_big)
@@ -55,3 +55,23 @@ end
 if minetest.get_modpath("rainbow_ore") then
 		ingots.register_ingots("rainbow_ore:rainbow_ore_ingot", "ingot_rainbow_ore.png", conf.is_big)
 end
+--]]
+
+minetest.register_craftitem("ingots:silver", {
+	description = "Silver Bar",
+	inventory_image = "moreores_silver_ingot.png"
+})
+
+minetest.register_craftitem("ingots:gold", {
+	description = "Gold Bar",
+	inventory_image = "default_gold_ingot.png"
+})
+
+minetest.register_craftitem("ingots:chromium", {
+	description = "Chromium Bar",
+	inventory_image = "technic_chromium_ingot.png"
+})
+
+ingots.register_ingots("ingots:silver", "ingot_silver.png", conf.is_big)
+ingots.register_ingots("ingots:gold", "ingot_gold.png", conf.is_big)
+ingots.register_ingots("ingots:chromium", "ingot_chromium.png", conf.is_big)
